@@ -26,7 +26,7 @@ def load_data_std(cli_args):
     ]
     
     train_cameras = interp_cameras(data["train_cameras"])
-    test_cameras = interp_cameras(data["test_cameras"])   
+    test_cameras = interp_cameras(data["test_cameras"])
 
     # Normalize
     normalize_cameras = lambda cameras : torch.stack([normalize_max(camera) for camera in cameras], dim=0)
@@ -181,12 +181,13 @@ def single_main(cli_args):
     counter = 5
     for epoch in range(int(1e+6)):                
         train_loss, test_loss = run_epoch(optims)
-
-        if epoch % 10 == 0:
-            print("Grad step: {}, loss: {:.4f}".format(epoch, train_loss), end="\r")
-        
+                
         loss_history["train"].append(train_loss)
         loss_history["test"].append(test_loss)
+
+        if epoch % 10 == 0:
+            print("Grad step: {}, train-loss: {:.4f}, test-loss: {:.4f}".format(
+                epoch, train_loss, test_loss), end="\r")
 
         if optims["optimizer"].param_groups[0]['lr'] < optims["config"]["stop_thresh"]: break        
 
