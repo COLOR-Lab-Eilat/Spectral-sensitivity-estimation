@@ -1,0 +1,12 @@
+learning_rate   = 8e-4
+momentum        = 0.0
+scheduler_decay = 0.5
+patience        = 2000
+plot_every      = 1000
+
+# Loss terms
+autoencoder = 100.0
+photo       = 0.00
+cmatrices   = 0.2
+
+stop_thresh = 4e-4

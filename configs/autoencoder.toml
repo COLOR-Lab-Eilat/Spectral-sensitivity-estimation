@@ -1,0 +1,19 @@
+learning_rate   = 1e-1
+momentum        = 0.5
+patience        = 2000
+scheduler_decay = 0.5
+
+bottleneck       = 6
+encoder_sizes    = [4.0, 2.0]
+decoder_sizes    = [2.0, 4.0]
+
+# Dropouts applied before above-specified layers
+encoder_dropouts = [0.2, 0.5]
+decoder_dropouts = [0.0, 0.5]
+
+weight_decay = 1e-4
+
+scaling = 0.2
+roll = 2
+
+stop_thresh = 1e-5
