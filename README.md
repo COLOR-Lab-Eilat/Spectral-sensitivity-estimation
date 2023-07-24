@@ -1,6 +1,6 @@
 # Spectral sensitivity estimation without a camera
 
-This repository contains the code for paper [Spectral sensitivity estimation without a camera](https://arxiv.org/abs/2304.11549).
+This repository contains the code for the paper [Spectral sensitivity estimation without a camera](https://arxiv.org/abs/2304.11549).
 
 A pretrained autoencoder can be found in `output/autoencoder.pt`. To retrain it, you can run the following command in a Linux terminal:
 ```shell
